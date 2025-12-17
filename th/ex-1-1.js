@@ -7,6 +7,16 @@
 
 // Start coding here
 
+function sumPositiveNumbers(numbers) {
+  let totalNumber = 0;
+  for (let number of numbers) {
+    if (number > 0) {
+      totalNumber += number;
+    }
+  }
+  return totalNumber;
+}
+
 const numbers1 = [3, -5, 10, 12, -7, 0, 8, 2];
 console.log(sumPositiveNumbers(numbers1)); // 35
 

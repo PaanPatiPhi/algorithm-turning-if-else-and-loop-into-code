@@ -9,6 +9,20 @@
 
 // Start coding here
 
+function calculateAverageScore (scores, classNumber){
+  let totalScores = 0;
+  let count = 0;
+  for (let item of scores){
+    if (item.classNumber === classNumber){
+    totalScores += item.mathScore;
+    count++;
+    }
+  }
+  console.log(totalScores)
+  console.log(count)
+  return totalScores/count;
+}
+
 const scores = [
   { firstname: "Isabel", lastname: "Moore", classNumber: 3, mathScore: 78 },
   { firstname: "Alice", lastname: "Clark", classNumber: 1, mathScore: 80 },
@@ -22,5 +36,6 @@ const scores = [
   { firstname: "Henry", lastname: "Wilson", classNumber: 2, mathScore: 88 },
 ];
 
+console.log(scores[1].mathScore)
 console.log(calculateAverageScore(scores, 1)); // 86.75
 console.log(calculateAverageScore(scores, 3)); // 80

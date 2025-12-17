@@ -8,6 +8,19 @@
 
 // Start coding here
 
+function countDogByBreed (breedArray){
+  let result = {};
+  for (let breed of breedArray){
+    if (result[breed] === undefined){
+      result[breed] = 1;
+    }
+    else{
+      result[breed]++;
+    }
+  }
+  return result;
+}
+
 const breedArray1 = [
     "Beagle",
     "Labrador Retriever",
@@ -18,7 +31,7 @@ const breedArray1 = [
     "Beagle",
     "Beagle",
   ];
-  
+
   console.log(countDogByBreed(breedArray1));
   /* 
           {
@@ -55,4 +68,12 @@ const breedArray1 = [
   
   console.log(dogFrequency["German Shepherd"]); // 10
   console.log(dogFrequency["Shih Tzu"]); // undefined
+
+
+  
+  let breedArray3= ["Beagle",
+    "Golden"]
+    let test={};
+    test["Beagle"] = 1;
+    console.log(test)
   
